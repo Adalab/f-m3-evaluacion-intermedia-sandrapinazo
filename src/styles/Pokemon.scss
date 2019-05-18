@@ -1,0 +1,39 @@
+.Pokemon-noSelected {
+  margin: 10px;
+  padding: 5px 0;
+  width: 140px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.Pokemon-selected {
+  background-color: pink;
+  margin: 10px;
+  padding: 10px 0;
+  width: 140px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.Name {
+  margin: 5px 0;
+  width: 140px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.ListType {
+  list-style: none;
+  padding: 0 5px;
+  display: flex;
+}
+
+.Type {
+  font-size: 10px;
+  margin: 3px;
+  padding: 5px;
+  background-color: grey;
+  border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+}
