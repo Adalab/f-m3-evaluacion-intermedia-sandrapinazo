@@ -1,22 +1,19 @@
-.Pokemon-noSelected {
+.Pokemon {
   margin: 10px;
-  padding: 5px 0;
+  padding: 10px 0 0 0;
   width: 140px;
-  border-radius: 10px;
   border: 1px solid grey;
+  border-radius: 10px;
 }
 
-.Pokemon-selected {
-  background-color: pink;
-  margin: 10px;
-  padding: 10px 0;
-  width: 140px;
-  border-radius: 10px;
-  border: 1px solid grey;
+.Selected {
+    background-color: pink;
+    border-color: darkred;
 }
 
 .Name {
-  margin: 5px 0;
+  margin: 0;
+  padding: 5px 0;
   width: 140px;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
@@ -24,7 +21,7 @@
 
 .ListType {
   list-style: none;
-  padding: 0 5px;
+  padding: 5px;
   display: flex;
 }
 
