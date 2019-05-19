@@ -7,10 +7,10 @@ class PokeList extends React.Component {
   render() {
     return (
       <ul className="PokemonUl">
-        {this.props.data.map(item => {
+        {this.props.data.map((item, index) => {
           return (
             <li key={item.id}>
-              <Pokemon name={item.name} url={item.url} types={item.types} />
+              <Pokemon data={item} index={index} selector={this.props.selector}/>
             </li>
           );
         })}
@@ -24,10 +24,12 @@ PokeList.protoTypes = {
     PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string,
+      isFavorite: PropTypes.string,
       types: PropTypes.arrayOf(PropTypes.string),
       url: PropTypes.string
     })
-  ).isRequired
+  ).isRequired,
+  selector: PropTypes.func.isRequired,
 };
 
 export default PokeList;

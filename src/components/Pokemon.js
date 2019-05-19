@@ -4,15 +4,17 @@ import "../styles/Pokemon.scss";
 
 class Pokemon extends React.Component {
   render() {
+      const {name, types, url, isFavorite}=this.props.data;
     return (
       <div
-        className="Pokemon"
-        onClick={this.clickHandler}
+        className={`Pokemon ${isFavorite}`}
+        data-index={this.props.index}
+        onClick={this.props.selector}
       >
-        <img src={this.props.url} alt={this.props.name} />
-        <h2 className="Name">{this.props.name}</h2>
+        <img src={url} alt={name} />
+        <h2 className="Name">{name}</h2>
         <ul className="ListType">
-          {this.props.types.map((item, index) => {
+          {types.map((item, index) => {
             return (
               <li className="Type" key={index}>
                 {item}
@@ -26,9 +28,15 @@ class Pokemon extends React.Component {
 }
 
 Pokemon.propTypes = {
-  name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  types: PropTypes.array
+  data: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    isFavorite: PropTypes.string,
+    types: PropTypes.arrayOf(PropTypes.string),
+    url: PropTypes.string
+  }).isRequired,
+  index: PropTypes.number,
+  selector: PropTypes.func.isRequired,
 };
 
 export default Pokemon;
